@@ -24,7 +24,7 @@ namespace CxFlatUI
         {
             base.RoundedEdges = true;
         }
-        
+
         /// <summary>
         /// 绘制整个背景
         /// </summary>
@@ -55,7 +55,7 @@ namespace CxFlatUI
         /// <param name="e"></param>
         protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
         {
-            if(e.ToolStrip is MenuStrip)
+            if (e.ToolStrip is MenuStrip)
             {
                 //如果被选中或被按下
                 if (e.Item.Selected || e.Item.Pressed)
@@ -67,7 +67,7 @@ namespace CxFlatUI
                     base.OnRenderMenuItemBackground(e);
                 }
             }
-            else if(e.ToolStrip is ToolStripDropDown)
+            else if (e.ToolStrip is ToolStripDropDown)
             {
                 if (e.Item.Selected)
                 {
@@ -86,7 +86,7 @@ namespace CxFlatUI
         /// <param name="e"></param>
         protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)
         {
-            e.Graphics.DrawLine(new Pen(ThemeColors.OneLevelBorder,1.5f), 5, 2.75f, e.Item.Width-5, 2.75f);
+            e.Graphics.DrawLine(new Pen(ThemeColors.OneLevelBorder, 1.5f), 5, 2.75f, e.Item.Width - 5, 2.75f);
         }
 
         protected override void OnRenderImageMargin(ToolStripRenderEventArgs e)

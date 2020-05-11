@@ -23,7 +23,7 @@ namespace CxFlatUI
             base.OnPaint(pe);
 
             var backPath = DrawHelper.CreateRoundRect(0, 00, Width, Height, 4);
-            graphics.DrawPath(new Pen(Parent.BackColor,4), backPath);
+            graphics.DrawPath(new Pen(Parent.BackColor, 4), backPath);
         }
 
 

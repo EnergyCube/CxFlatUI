@@ -94,7 +94,7 @@ namespace CxFlatUI
                     break;
             }
 
-            var back = DrawHelper.CreateRoundRect(0.5f, 0.5f, Width-1, Height-1, 3);
+            var back = DrawHelper.CreateRoundRect(0.5f, 0.5f, Width - 1, Height - 1, 3);
             graphics.FillPath(new SolidBrush(Color.White), back);
             graphics.FillPath(backBrush, back);
             graphics.DrawPath(new Pen(textBrush, 1f), back);

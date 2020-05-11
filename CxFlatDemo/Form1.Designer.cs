@@ -1123,4 +1123,3 @@ namespace CxFlatDemo
         private CxFlatComboBox cxFlatComboBox1;
     }
 }
-

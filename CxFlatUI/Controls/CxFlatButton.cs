@@ -67,8 +67,8 @@ namespace CxFlatUI.Controls
             {
                 var BG = DrawHelper.CreateRoundRect(0.5f, 0.5f, Width - 1, Height - 1, 3);
                 graphics.FillPath(new SolidBrush(enterFlag ? Color.FromArgb(25, ThemeColors.PrimaryColor) : Color.White), BG);
-                graphics.DrawPath(new Pen(clickFlag ? ThemeColors.PrimaryColor : ThemeColors.OneLevelBorder,1), BG);
-                graphics.DrawString(Text, Font, new SolidBrush(enterFlag?ThemeColors.PrimaryColor:ThemeColors.MainText), new RectangleF(0, 0, Width, Height), StringAlign.Center);
+                graphics.DrawPath(new Pen(clickFlag ? ThemeColors.PrimaryColor : ThemeColors.OneLevelBorder, 1), BG);
+                graphics.DrawString(Text, Font, new SolidBrush(enterFlag ? ThemeColors.PrimaryColor : ThemeColors.MainText), new RectangleF(0, 0, Width, Height), StringAlign.Center);
             }
             else
             {
@@ -94,7 +94,7 @@ namespace CxFlatUI.Controls
                     default:
                         break;
                 }
-                
+
                 var brush = new SolidBrush(enterFlag ? (clickFlag ? backColor : Color.FromArgb(225, backColor)) : backColor);
                 graphics.FillPath(brush, BG);
                 if (!Enabled)

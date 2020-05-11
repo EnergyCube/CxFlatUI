@@ -78,7 +78,7 @@ namespace CxFlatUI
             graphics.FillRectangle(new SolidBrush(Color.White), PointAnimationNum, PointAnimationNum, SizeAnimationNum, SizeAnimationNum);
 
             //绘制文字
-            graphics.DrawString(Text, Font, new SolidBrush(Checked?ThemeColors.PrimaryColor:ThemeColors.MainText), new RectangleF(22, 0, Width - 22, Height), StringAlign.Center);
+            graphics.DrawString(Text, Font, new SolidBrush(Checked ? ThemeColors.PrimaryColor : ThemeColors.MainText), new RectangleF(22, 0, Width - 22, Height), StringAlign.Center);
         }
 
         //

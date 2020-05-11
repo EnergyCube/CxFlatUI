@@ -62,7 +62,7 @@ namespace CxFlatUI
 
         public CxFlatSwitch()
         {
-            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer , true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer, true);
             DoubleBuffered = true;
             Height = 20; Width = 42;
             AnimationTimer.Tick += new EventHandler(AnimationTick);

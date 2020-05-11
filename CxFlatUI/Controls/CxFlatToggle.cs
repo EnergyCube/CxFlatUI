@@ -59,13 +59,13 @@ namespace CxFlatUI
             //
             //圆形
             //
-            graphics.FillEllipse(new SolidBrush(Checked ? ThemeColors.PrimaryColor: ThemeColors.OneLevelBorder), new RectangleF(PointAnimationNum, 1, 18, 18));
-            graphics.FillEllipse(new SolidBrush(Checked ? ThemeColors.PrimaryColor : Color.White), new RectangleF(PointAnimationNum+2, 3, 14, 14));
+            graphics.FillEllipse(new SolidBrush(Checked ? ThemeColors.PrimaryColor : ThemeColors.OneLevelBorder), new RectangleF(PointAnimationNum, 1, 18, 18));
+            graphics.FillEllipse(new SolidBrush(Checked ? ThemeColors.PrimaryColor : Color.White), new RectangleF(PointAnimationNum + 2, 3, 14, 14));
         }
 
         public CxFlatToggle()
         {
-            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer , true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer, true);
             DoubleBuffered = true;
             Height = 20; Width = 47;
             AnimationTimer.Tick += new EventHandler(AnimationTick);

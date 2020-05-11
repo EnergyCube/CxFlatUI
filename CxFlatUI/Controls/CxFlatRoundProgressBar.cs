@@ -54,7 +54,7 @@ namespace CxFlatUI
 
             graphics.FillEllipse(new SolidBrush(ThemeColors.OneLevelBorder), new Rectangle(0, 0, Width, Height));
 
-            if(_isError)
+            if (_isError)
             {
                 //绘制扇形
                 graphics.FillPie(new SolidBrush(ThemeColors.Danger), new Rectangle(0, 0, Width, Width), 0, _valueNumber * 3.6f);
@@ -65,18 +65,18 @@ namespace CxFlatUI
             }
             else
             {
-                if(_valueNumber==100)
+                if (_valueNumber == 100)
                 {
-                    graphics.FillPie(new SolidBrush(ThemeColors.Success), new Rectangle(0, 0, Width, Width), 0, _valueNumber * 3.6f);  
+                    graphics.FillPie(new SolidBrush(ThemeColors.Success), new Rectangle(0, 0, Width, Width), 0, _valueNumber * 3.6f);
                     graphics.FillEllipse(new SolidBrush(Color.White), new RectangleF(_roundWidth, _roundWidth, Width - _roundWidth * 2, Width - _roundWidth * 2));
-                    graphics.DrawLine(new Pen(ThemeColors.Success, 2f), Width / 2 - 6, Height / 2, Width / 2-3, Height / 2 + 6);
-                    graphics.DrawLine(new Pen(ThemeColors.Success, 2f), Width / 2 + 6, Height / 2 - 6, Width / 2-3, Height / 2 + 6);
+                    graphics.DrawLine(new Pen(ThemeColors.Success, 2f), Width / 2 - 6, Height / 2, Width / 2 - 3, Height / 2 + 6);
+                    graphics.DrawLine(new Pen(ThemeColors.Success, 2f), Width / 2 + 6, Height / 2 - 6, Width / 2 - 3, Height / 2 + 6);
                 }
                 else
                 {
                     graphics.FillPie(new SolidBrush(ThemeColors.PrimaryColor), new Rectangle(0, 0, Width, Width), 0, _valueNumber * 3.6f);
                     graphics.FillEllipse(new SolidBrush(Color.White), new RectangleF(_roundWidth, _roundWidth, Width - _roundWidth * 2, Width - _roundWidth * 2));
-                    graphics.DrawString(_valueNumber.ToString()+"%", new Font("微软雅黑", 12f), new SolidBrush(ThemeColors.PrimaryColor), new RectangleF(_roundWidth, _roundWidth, Width - (_roundWidth * 2), Width - (_roundWidth * 2)), StringAlign.Center);
+                    graphics.DrawString(_valueNumber.ToString() + "%", new Font("微软雅黑", 12f), new SolidBrush(ThemeColors.PrimaryColor), new RectangleF(_roundWidth, _roundWidth, Width - (_roundWidth * 2), Width - (_roundWidth * 2)), StringAlign.Center);
                 }
             }
         }

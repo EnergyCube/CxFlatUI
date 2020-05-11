@@ -91,7 +91,7 @@ namespace CxFlatUI
                     graphics.DrawString(_valueNumber != 100 ? _valueNumber.ToString() + "%" : "ok!", Font, new SolidBrush(ThemeColors.FourLevelBorder), new RectangleF(x - 16, y - 25, 32, 20), StringAlign.Center);
 
                     graphics.FillRectangle(new SolidBrush(ThemeColors.OneLevelBorder), new RectangleF(16, 25, Width - 32, Height - 25));
-                    graphics.FillRectangle(new SolidBrush(_valueNumber == 100&&!_isError ? ThemeColors.Success : tempColor), new RectangleF(16, 25, x - 16, Height - 25));
+                    graphics.FillRectangle(new SolidBrush(_valueNumber == 100 && !_isError ? ThemeColors.Success : tempColor), new RectangleF(16, 25, x - 16, Height - 25));
                     break;
 
                 case Style.ValueInSide:
@@ -111,44 +111,44 @@ namespace CxFlatUI
                         path2.AddArc(new RectangleF(0, 0, Height, Height), 90, 180);
                         path2.AddArc(new RectangleF(_valueNumber * (Width - Height) / 100, 0, Height, Height), -90, 180);
                         path2.CloseAllFigures();
-                        graphics.FillPath(new SolidBrush(_valueNumber == 100&&!_isError ? ThemeColors.Success : tempColor), path2);
+                        graphics.FillPath(new SolidBrush(_valueNumber == 100 && !_isError ? ThemeColors.Success : tempColor), path2);
 
-                        graphics.DrawString(_valueNumber.ToString() + "%", new Font("微软雅黑", 9f), new SolidBrush(ThemeColors.FourLevelBorder), new RectangleF(_valueNumber * (Width -Height) / 100 - 33, 0, 45, Height), StringAlign.Right);
+                        graphics.DrawString(_valueNumber.ToString() + "%", new Font("微软雅黑", 9f), new SolidBrush(ThemeColors.FourLevelBorder), new RectangleF(_valueNumber * (Width - Height) / 100 - 33, 0, 45, Height), StringAlign.Right);
                     }
                     break;
                 case Style.ValueOutSide:
                     var path3 = new GraphicsPath();
-                    path3.AddArc(new RectangleF(0, 4, Height-8, Height-8), 90, 180);
-                    path3.AddArc(new RectangleF(Width - 50, 4, Height-8, Height-8), -90, 180);
+                    path3.AddArc(new RectangleF(0, 4, Height - 8, Height - 8), 90, 180);
+                    path3.AddArc(new RectangleF(Width - 50, 4, Height - 8, Height - 8), -90, 180);
                     path3.CloseAllFigures();
                     graphics.FillPath(new SolidBrush(ThemeColors.OneLevelBorder), path3);
 
-                    if(_valueNumber!=0)
+                    if (_valueNumber != 0)
                     {
                         var path4 = new GraphicsPath();
-                        path4.AddArc(new RectangleF(0, 4, Height-8, Height-8), 90, 180);
-                        path4.AddArc(new RectangleF(_valueNumber * (Width - 50) / 100, 4, Height-8, Height-8), -90, 180);
+                        path4.AddArc(new RectangleF(0, 4, Height - 8, Height - 8), 90, 180);
+                        path4.AddArc(new RectangleF(_valueNumber * (Width - 50) / 100, 4, Height - 8, Height - 8), -90, 180);
                         path4.CloseAllFigures();
-                        graphics.FillPath(new SolidBrush(_valueNumber == 100&&!_isError ? ThemeColors.Success : tempColor), path4);
+                        graphics.FillPath(new SolidBrush(_valueNumber == 100 && !_isError ? ThemeColors.Success : tempColor), path4);
                     }
 
-                    if(_isError)
+                    if (_isError)
                     {
                         graphics.FillEllipse(new SolidBrush(ThemeColors.Danger), new RectangleF(Width - 40, 0, Height, Height));
                         var a = Width - 40 + 4;
                         var b = Height - 4;
-                        graphics.DrawLine(new Pen(ThemeColors.FourLevelBorder), a,b-6,a+6,b);
-                        graphics.DrawLine(new Pen(ThemeColors.FourLevelBorder), a+6, b-6, a, b);
+                        graphics.DrawLine(new Pen(ThemeColors.FourLevelBorder), a, b - 6, a + 6, b);
+                        graphics.DrawLine(new Pen(ThemeColors.FourLevelBorder), a + 6, b - 6, a, b);
                     }
                     else
                     {
-                        if(_valueNumber==100)
+                        if (_valueNumber == 100)
                         {
                             graphics.FillEllipse(new SolidBrush(ThemeColors.Success), new RectangleF(Width - 40, 0, Height, Height));
                             var a = Width - 40 + 4;
                             var b = Height - 4;
                             graphics.DrawLine(new Pen(ThemeColors.FourLevelBorder), a, b - 3, a + 3, b);
-                            graphics.DrawLine(new Pen(ThemeColors.FourLevelBorder), a + 3, b, a+6, b-6);
+                            graphics.DrawLine(new Pen(ThemeColors.FourLevelBorder), a + 3, b, a + 6, b - 6);
                         }
                         else
                         {
